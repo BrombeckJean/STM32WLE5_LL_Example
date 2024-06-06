@@ -1,5 +1,5 @@
 Créer un système clock conf avec les LL. 					Fait
-Créer un système clock pour tout les clock 					Fait
-Créer un systick_conf										Fait
-Créer un fichier exemple GPIO LED et SWICH					Fait
-Créer un fichier exemple USART								Fait
+Créer un système clock pour tout les clock 				Fait
+Créer un systick_conf										          Fait
+Créer un fichier exemple GPIO LED et SWICH				Fait
+Créer un fichier exemple USART								    Fait
