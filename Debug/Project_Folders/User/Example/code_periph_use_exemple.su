@@ -1,0 +1,8 @@
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_gpio.h:994:22:LL_GPIO_TogglePin	24	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_i2c.h:2218:25:LL_I2C_ReceiveData8	16	static
+../Project_Folders/User/Example/code_periph_use_exemple.c:13:7:example_gpioa_pin4_toogle	24	static
+../Project_Folders/User/Example/code_periph_use_exemple.c:34:7:example_char_usart1_transmit	4	static
+../Project_Folders/User/Example/code_periph_use_exemple.c:60:7:exemple_printf_usart1_transmit	4	static
+../Project_Folders/User/Example/code_periph_use_exemple.c:84:7:example_char_usart2_transmit	16	static
+../Project_Folders/User/Example/code_periph_use_exemple.c:110:7:example_printf_usart2_transmit	8	static
+../Project_Folders/User/Example/code_periph_use_exemple.c:135:8:Test_i2c	16	static

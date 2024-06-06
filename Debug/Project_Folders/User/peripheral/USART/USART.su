@@ -1,0 +1,16 @@
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2047:22:LL_RCC_SetUSARTClockSource	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:914:22:LL_APB1_GRP1_EnableClock	24	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:1018:22:LL_APB1_GRP1_DisableClock	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:626:22:LL_USART_Enable	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:640:22:LL_USART_Disable	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:901:22:LL_USART_SetTransferDirection	40	static,ignoring_inline_asm
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:1056:22:LL_USART_SetOverSampling	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:1344:22:LL_USART_ConfigCharacter	24	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:1386:22:LL_USART_SetRXPinLevel	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:1413:22:LL_USART_SetTXPinLevel	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:1872:22:LL_USART_SetBaudRate	32	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_usart.h:4266:22:LL_USART_TransmitData8	16	static
+../Project_Folders/User/peripheral/USART/USART.c:11:7:usart1_init	4	static
+../Project_Folders/User/peripheral/USART/USART.c:55:7:usart2_init	32	static
+../Project_Folders/User/peripheral/USART/USART.c:104:7:char8B_usart_transmit	16	static
+../Project_Folders/User/peripheral/USART/USART.c:114:6:__io_putchar	16	static

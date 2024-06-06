@@ -1,0 +1,16 @@
+stm32wlxx_ll_rcc.h:2047:22:LL_RCC_SetUSARTClockSource	1
+stm32wlxx_ll_bus.h:914:22:LL_APB1_GRP1_EnableClock	1
+stm32wlxx_ll_bus.h:1018:22:LL_APB1_GRP1_DisableClock	1
+stm32wlxx_ll_usart.h:626:22:LL_USART_Enable	1
+stm32wlxx_ll_usart.h:640:22:LL_USART_Disable	1
+stm32wlxx_ll_usart.h:901:22:LL_USART_SetTransferDirection	2
+stm32wlxx_ll_usart.h:1056:22:LL_USART_SetOverSampling	1
+stm32wlxx_ll_usart.h:1344:22:LL_USART_ConfigCharacter	1
+stm32wlxx_ll_usart.h:1386:22:LL_USART_SetRXPinLevel	1
+stm32wlxx_ll_usart.h:1413:22:LL_USART_SetTXPinLevel	1
+stm32wlxx_ll_usart.h:1872:22:LL_USART_SetBaudRate	4
+stm32wlxx_ll_usart.h:4266:22:LL_USART_TransmitData8	1
+USART.c:11:7:usart1_init	1
+USART.c:55:7:usart2_init	2
+USART.c:104:7:char8B_usart_transmit	2
+USART.c:114:6:__io_putchar	1

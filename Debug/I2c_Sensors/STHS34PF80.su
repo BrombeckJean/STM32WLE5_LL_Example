@@ -1,0 +1,10 @@
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_i2c.h:1552:26:LL_I2C_IsActiveFlag_TXE	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_i2c.h:2133:22:LL_I2C_HandleTransfer	24	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_i2c.h:2230:22:LL_I2C_TransmitData8	16	static
+../I2c_Sensors/STHS34PF80.c:15:6:I2C_STHS34PF80_Data_Reg_Init	4	static
+../I2c_Sensors/STHS34PF80.c:29:6:I2C_STHS34PF80_Write	24	static
+../I2c_Sensors/STHS34PF80.c:39:6:I2C_STHS34PF80_Read	24	static
+../I2c_Sensors/STHS34PF80.c:51:9:I2C_STHS34PF80_Check_Activ_Tambient_Tobject	8	static
+../I2c_Sensors/STHS34PF80.c:61:6:I2C_STHS34PF80_Enabled_Tambient_Tobject	8	static
+../I2c_Sensors/STHS34PF80.c:69:6:I2C_STHS34PF80_Disable_Tambient_Tobject	8	static
+../I2c_Sensors/STHS34PF80.c:77:6:I2C_STHS34PF80_Read_Tambient	8	static

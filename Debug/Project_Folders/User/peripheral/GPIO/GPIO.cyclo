@@ -1,0 +1,2 @@
+stm32wlxx_ll_bus.h:449:22:LL_AHB2_GRP1_EnableClock	1
+GPIO.c:48:7:gpio_init	5
