@@ -43,34 +43,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Captor_STHS34PF80_Test
+BUILD_ARTIFACT_NAME := STM32WLE5_LL_Example
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Captor_STHS34PF80_Test.elf \
+STM32WLE5_LL_Example.elf \
 
 MAP_FILES += \
-Captor_STHS34PF80_Test.map \
+STM32WLE5_LL_Example.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Captor_STHS34PF80_Test.list \
+STM32WLE5_LL_Example.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Captor_STHS34PF80_Test.elf secondary-outputs
+main-build: STM32WLE5_LL_Example.elf secondary-outputs
 
 # Tool invocations
-Captor_STHS34PF80_Test.elf Captor_STHS34PF80_Test.map: $(OBJS) $(USER_OBJS) ../STM32WLE5CCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Captor_STHS34PF80_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32WLE5CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Captor_STHS34PF80_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STM32WLE5_LL_Example.elf STM32WLE5_LL_Example.map: $(OBJS) $(USER_OBJS) ../STM32WLE5CCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STM32WLE5_LL_Example.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32WLE5CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32WLE5_LL_Example.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -79,14 +79,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Captor_STHS34PF80_Test.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Captor_STHS34PF80_Test.list"
+STM32WLE5_LL_Example.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "STM32WLE5_LL_Example.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Captor_STHS34PF80_Test.elf Captor_STHS34PF80_Test.list Captor_STHS34PF80_Test.map default.size.stdout
+	-$(RM) STM32WLE5_LL_Example.elf STM32WLE5_LL_Example.list STM32WLE5_LL_Example.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

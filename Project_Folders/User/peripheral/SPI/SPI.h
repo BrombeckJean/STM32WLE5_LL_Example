@@ -10,7 +10,7 @@
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE ----------------------------------------------------------*/
 	/* LL include */
-	#include <periph_activation.h>
+	#include "periph_activation.h"
 	#include "full_ll_include.h"
 	#include "GPIO.h"
 

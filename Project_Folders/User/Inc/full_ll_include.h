@@ -7,12 +7,16 @@
 #define PROJECT_FOLDERS_INC_FULL_LL_INCLUDE_H_
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE ----------------------------------------------------------*/
-	/* outside include project */
-	#include <stdint.h>   // C99 types
-	#include <stdbool.h>  // bool type
-	#include <stdio.h>	  // printf
+	/* outside include project. */
+	#include <stdint.h>   /* C99 types	*/
+	#include <stdbool.h>  /* bool type	*/
+	#include <stdio.h>	  /* printf 	*/
 
-	/* LL include */
+	/* HAL include */
+	#include "stm32wlxx_hal.h"
+	#include "stm32wlxx_hal_def.h"
+
+	/* LL include. */
 	#include "stm32wlxx_ll_adc.h"
 	#include "stm32wlxx_ll_bus.h"
 	#include "stm32wlxx_ll_comp.h"
@@ -41,7 +45,7 @@
 	#include "stm32wlxx_ll_utils.h"
 	#include "stm32wlxx_ll_wwdg.h"
 
-	/*Cotex lib*/
+	/* Cortex M4 lib. */
 	#include "core_cm4.h"
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/

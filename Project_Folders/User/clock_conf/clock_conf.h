@@ -1,7 +1,6 @@
 /********************************************************************************
   * @file           : clock_conf.h
   * @brief          : Header for clock_conf.c file.
-  *                   This file contains the common defines of the application.
   *******************************************************************************/
 
 //------------------ SPECIAL DEFINE ------------------------------------------------------------------------- SPECIAL DEFINE ---------------------------------------------------*/
@@ -9,22 +8,18 @@
 #define PROJECT_FOLDERS_INC_CLOCK_CONF_H_
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE ----------------------------------------------------------*/
-	/* outside include project */
-	#include <stdint.h>   // C99 types
-	#include <stdbool.h>  // bool type
-
-	/* HAL include */
-	#include "stm32wlxx_hal.h"
-	#include "stm32wlxx_hal_def.h"
-
-	/* LL include */
+	/* LL include. */
 	#include "full_ll_include.h"
 
+//------------------ DEFINE --------------------------------------------------------------------------------- DEFINE -----------------------------------------------------------*/
+	#define Clock_Src  LL_RCC_SYS_CLKSOURCE_HSE
+
+
 //------------------ PROTOTYPE ------------------------------------------------------------------------------ PROTOTYPE --------------------------------------------------------*/
-	void system_clock_config( void );
-	void systick_conf (void);
-	uint32_t GetSystemClockFreq(void);
-	uint32_t PLL_GetFreqDomain_SYS(void);
+	void System_Clock_Config( void );
+	void Systick_Conf (void);
+	uint32_t Get_System_Clock_Freq(void);
+	uint32_t PLL_Get_Freq_Domain_SYS(void);
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/
 #endif /* PROJECT_FOLDERS_INC_CLOCK_CONF_H_ */

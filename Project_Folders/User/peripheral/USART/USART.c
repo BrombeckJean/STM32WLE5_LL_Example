@@ -1,7 +1,7 @@
-//********************************************************************************
-//* @file           : USART.c
-//* @brief          : peripherique initialisation folder.
-//********************************************************************************
+/********************************************************************************
+ * @file           : USART.c
+ * @brief          : peripherique initialisation folder.
+ ********************************************************************************/
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE --------------------------------------------------------*/
 	#include "USART.h"
@@ -12,18 +12,12 @@
 	void Usart1_Init(void)
 	{
 		#ifdef usart1
-			/*TO DO*/
-			#ifdef gpio
-			#else
-				#warning //you need to uncomente the gpio define in "periph_init.h". If you want to use this function
-			#endif
-
 			/*gpio pin initialisation for USART1 mode*/
 				//TX mode
-				gpio_init(USART1_TX_GPIO_Port, USART1_TX_Pin, LL_GPIO_MODE_ALTERNATE, USART1_TX_PULL, LL_GPIO_SPEED_FREQ_HIGH, USART1_TX_OUTPUT,USART1_TX_AF);
+				Gpio_Init(USART1_TX_GPIO_Port, USART1_TX_Pin, LL_GPIO_MODE_ALTERNATE, USART1_TX_PULL, LL_GPIO_SPEED_FREQ_HIGH, USART1_TX_OUTPUT,USART1_TX_AF);
 
 				//RX mode
-				gpio_init(USART1_RX_GPIO_Port, USART1_RX_Pin, LL_GPIO_MODE_ALTERNATE, USART1_RX_PULL, LL_GPIO_SPEED_FREQ_HIGH, USART1_RX_OUTPUT,USART1_RX_AF);
+				Gpio_Init(USART1_RX_GPIO_Port, USART1_RX_Pin, LL_GPIO_MODE_ALTERNATE, USART1_RX_PULL, LL_GPIO_SPEED_FREQ_HIGH, USART1_RX_OUTPUT,USART1_RX_AF);
 
 			//Disable/Reset USART1
 			LL_USART_Disable(USART1);
@@ -46,8 +40,6 @@
 			LL_USART_SetBaudRate(USART1, freqClockUsed, LL_USART_PRESCALER_DIV1, oversampling, BAUDRATE);
 
 			LL_USART_Enable(USART1);
-		#else
-			#warning //you need to uncomente the usart1 define in "periph_activation.h". If you want to use this function
 		#endif
 	}
 
@@ -57,18 +49,12 @@
 	void Usart2_Init(void)
 	{
 		#ifdef usart2
-			/*TO DO*/
-			#ifdef gpio
-			#else
-				#warning //you need to uncomente the gpio define in "periph_init.h". If you want to use this function
-			#endif
-
 			/*gpio pin initialisation for USART2 mode*/
 				//TX mode
-				gpio_init(USART2_TX_GPIO_Port, USART2_TX_Pin, LL_GPIO_MODE_ALTERNATE, USART2_TX_PULL, LL_GPIO_SPEED_FREQ_HIGH, USART2_TX_OUTPUT,USART2_TX_AF);
+				Gpio_Init(USART2_TX_GPIO_Port, USART2_TX_Pin, LL_GPIO_MODE_ALTERNATE, USART2_TX_PULL, LL_GPIO_SPEED_FREQ_HIGH, USART2_TX_OUTPUT,USART2_TX_AF);
 
 				//RX mode
-				gpio_init(USART2_RX_GPIO_Port, USART2_RX_Pin, LL_GPIO_MODE_ALTERNATE, USART2_RX_PULL, LL_GPIO_SPEED_FREQ_HIGH, USART2_RX_OUTPUT,USART2_RX_AF);
+				Gpio_Init(USART2_RX_GPIO_Port, USART2_RX_Pin, LL_GPIO_MODE_ALTERNATE, USART2_RX_PULL, LL_GPIO_SPEED_FREQ_HIGH, USART2_RX_OUTPUT,USART2_RX_AF);
 
 			//Disable/Reset USART2
 			LL_USART_Disable(USART2);
@@ -117,22 +103,12 @@
 	/* Warning this function can be define in an other folder ("syscalls"), so remove the function*/
 	int __io_putchar(int ch)
 	{
-		/*TO DO*/
-		#ifdef gpio
-		#else
-			#warning //you need to uncomente the gpio define in "periph_activation.h". If you want to use this function
-		#endif
-
 		#ifdef usart1
 		Char8B_Usart_Transmit(USART1,ch);
-		#else
-			#warning //you need to uncomente the usart1 define in "periph_activation.h". If you want to use this function
 		#endif
 
 		#ifdef usart2
 		Char8B_Usart_Transmit(USART2,ch);
-		#else
-			#warning //you need to uncomente the usart2 define in "periph_activation.h". If you want to use this function
 		#endif
 
 		return ch;

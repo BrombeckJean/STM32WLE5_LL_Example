@@ -1,7 +1,6 @@
 /********************************************************************************
-  * @file           : periph_init.h
-  * @brief          : Header for periph_init.c file.
-  *                   This file contains the common defines of the application.
+  * @file           : code_periph_use_exemple.h
+  * @brief          : Header for code_periph_use_exemple.c file.
   *******************************************************************************/
 
 //------------------ SPECIAL DEFINE ------------------------------------------------------------------------- SPECIAL DEFINE ---------------------------------------------------*/
@@ -10,18 +9,17 @@
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE ----------------------------------------------------------*/
 	#include <periph_init.h>
-#include <stdio.h>
 
 //------------------ PROTOTYPE ------------------------------------------------------------------------------ PROTOTYPE --------------------------------------------------------*/
 	/*GPIO function*/
-	void example_gpioa_pin4_toogle (void);
+	void GPIO_Toggle (GPIO_TypeDef * GPIOX, uint32_t pin);
 
 	/*USART function*/
-	void example_char_usart1_transmit (void);
-	void example_printf_usart1_transmit (void);
-	void example_char_usart2_transmit (void);
-	void example_printf_usart2_transmit (void);
-	void Test_i2c (void);
+	void Example_Char_Usart1_Transmit (void);
+	void Example_Printf_Usart1_Transmit (void);
+	void Example_Char_Usart2_Transmit (void);
+	void Example_Printf_Usart2_Transmit (void);
+	void Test_I2c (void);
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/
 #endif /* PROJECT_FOLDERS_INC_CODE_PERIPH_USE_EXEMPLE_H_ */

@@ -1,7 +1,7 @@
-//********************************************************************************
-//* @file           : GPIO.c
-//* @brief          : peripherique initialisation folder.
-//********************************************************************************
+/********************************************************************************
+ * @file           : GPIO.c
+ * @brief          : Configuration and initialization of GPIO.
+ ********************************************************************************/
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE --------------------------------------------------------*/
 	#include "GPIO.h"
@@ -9,13 +9,13 @@
 //------------------ GLOBAL STATEMENT ----------------------------------------------------------------------- GLOBLAL STATEMENT ----------------------------------------------*/
 	extern LL_GPIO_InitTypeDef  GPIO_InitStruct;
 //------------------ GPIO INIT ------------------------------------------------------------------------------ GPIO INIT ------------------------------------------------------*/
-	/* @brief  GPIO Initialisation
+	/* @brief  GPIO Initialization
 	 * @default gpio_init(0, LL_GPIO_PIN_0, 0, 0, 0, 0, LL_GPIO_AF_0);
 	 * @param1 Periphs This parameter can be a combination of the following values:
-	 *			@arg @ref gpioA
-	 *			@arg @ref gpioB
-	 *			@arg @ref gpioC
-	 *			@arg @ref gpioH
+	 *			@arg @ref GPIOA
+	 *			@arg @ref GPIOB
+	 *			@arg @ref GPIOC
+	 *			@arg @ref GPIOH
 	 * @param2 Periphs This parameter can be a combination of the following values:
 	 * @warning gpioh have only one pin LL_GPIO_PIN_3
 	 *			@arg @ref LL_GPIO_PIN_0
@@ -78,7 +78,5 @@
 				LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOH);
 				LL_GPIO_Init(GPIOH, &GPIO_InitStruct);
 			}
-		#else
-		#warning //you need to uncomente the  gpio define in "periph_init.h". If you want to use this function
 		#endif
 	}

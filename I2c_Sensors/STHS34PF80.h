@@ -1,7 +1,6 @@
 /********************************************************************************
   * @file           : STHS34PF80.h
-  * @brief          : Header for I2C.c file.
-  *                   This file contains the common defines of the application.
+  * @brief          : Header for STHS34PF80.c file.
   *******************************************************************************/
 
 //------------------ SPECIAL DEFINE ------------------------------------------------------------------------- SPECIAL DEFINE ---------------------------------------------------*/
@@ -9,14 +8,13 @@
 #define I2C_SENSORS_STHS34PF80_H_
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE ----------------------------------------------------------*/
-	/* LL include */
 	#include "periph_activation.h"
 	#include "full_ll_include.h"
 
-//------------------ DEFINE ------------------------------------------------------------------------------ DEFINE --------------------------------------------------------*/
+//------------------ DEFINE --------------------------------------------------------------------------------- DEFINE -----------------------------------------------------------*/
 	#define	SENSOR_ADDR		0x5A
 
-	/*address_register*/
+	/* Address_Register */
 	#define	STHS34PF80_LPF1		       0x0C  //Read and Write
 	#define	STHS34PF80_LPF2            0x0D  //Read and Write
 	#define	STHS34PF80_WHO_AM_I        0x0F  //Read (value = 0xD3)
@@ -42,7 +40,7 @@
 	#define	STHS34PF80_TAMB_SHOCK_H    0x3F  //Read
 
 //------------------ PROTOTYPE ------------------------------------------------------------------------------ PROTOTYPE --------------------------------------------------------*/
-	/*Data register*/
+	/* Data_Register */
 	typedef struct
 		{
 			uint8_t	LPF1;					//(Default = 0x04)
@@ -59,9 +57,9 @@
 	void I2C_STHS34PF80_Data_Reg_Init (void);
 
 	void I2C_STHS34PF80_Write (uint8_t addr_reg, uint8_t data);
-	void I2C_STHS34PF80_Read (uint8_t addr_reg);
+	void I2C_STHS34PF80_Read  (uint8_t addr_reg);
 
-	/*function to activate temperature and motion*/
+	/* Function to activate temperature and motion. */
 	uint8_t I2C_STHS34PF80_Check_Activ_Tambient_Tobject (void);
 	void I2C_STHS34PF80_Enabled_Tambient_Tobject (void);
 	void I2C_STHS34PF80_Disable_Tambient_Tobject (void);

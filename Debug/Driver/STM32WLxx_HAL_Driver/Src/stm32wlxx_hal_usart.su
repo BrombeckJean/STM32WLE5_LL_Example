@@ -1,4 +1,4 @@
-/home/jean/STM32CubeIDE/workspace_1.12.1/Captor_STHS34PF80_Test/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2169:26:LL_RCC_GetUSARTClockSource	16	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Example/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2169:26:LL_RCC_GetUSARTClockSource	16	static
 ../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_usart.c:276:19:HAL_USART_Init	16	static
 ../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_usart.c:337:19:HAL_USART_DeInit	16	static
 ../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_usart.c:380:13:HAL_USART_MspInit	16	static
