@@ -119,7 +119,13 @@ extern uint8_t I2C_IsActiveFlag_RXNE;
 	 *         	@arg @ref USART1.
 	 *         	@arg @ref USART2.
 	 * @retval None. */
-	void Display_Temperature (uint16_t value)
+	void Display_Temperature (int16_t value)
 	{
-		//double_I2C_data_Rx
+		int16_t  degree = 0;
+		uint16_t degree_hundredth = 0;
+
+		degree = value/100;
+		degree_hundredth = value % 100;
+
+		printf("Temperature = %d,%02d \n\r",degree,degree_hundredth);
 	}

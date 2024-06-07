@@ -65,6 +65,7 @@
 	void I2C_STHS34PF80_Disable_Tambient_Tobject (void);
 
 	void I2C_STHS34PF80_Read_Tambient (void);
+	void Display_Temperature (int16_t value);
 
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/

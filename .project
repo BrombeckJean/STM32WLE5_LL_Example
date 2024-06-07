@@ -3,6 +3,7 @@
 	<name>STM32WLE5_LL_Exemple</name>
 	<comment></comment>
 	<projects>
+		<project>STM32WLE5_LL_Exemple</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

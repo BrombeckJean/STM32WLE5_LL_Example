@@ -1,7 +1,6 @@
 /********************************************************************************
   * @file           : USART.h
   * @brief          : Header for USART.c.
-  *                   This file contains the common defines of the application.
   *******************************************************************************/
 
 //------------------ SPECIAL DEFINE ------------------------------------------------------------------------- SPECIAL DEFINE ---------------------------------------------------*/
@@ -44,7 +43,7 @@
 	#define USART1_TX_AF                LL_GPIO_AF_7
 	#define USART1_TX_PIN_LEVEL         LL_USART_TXPIN_LEVEL_STANDARD
 
-	/*USART1 RX*/
+	/* USART1 RX. */
 	#define USART1_RX_GPIO_Port         GPIOB
 	#define USART1_RX_Pin               LL_GPIO_PIN_7
 	#define USART1_RX_PULL              LL_GPIO_PULL_UP
@@ -52,7 +51,7 @@
 	#define USART1_RX_AF                LL_GPIO_AF_7
 	#define USART1_RX_PIN_LEVEL         LL_USART_RXPIN_LEVEL_STANDARD
 
-	/*USART2 TX*/
+	/* USART2 TX. */
 	#define USART2_TX_GPIO_Port         GPIOA
 	#define USART2_TX_Pin               LL_GPIO_PIN_2
 	#define USART2_TX_PULL              LL_GPIO_PULL_NO
@@ -60,7 +59,7 @@
 	#define USART2_TX_AF                LL_GPIO_AF_7
 	#define USART2_TX_PIN_LEVEL         LL_USART_TXPIN_LEVEL_STANDARD
 
-	/*USART2 RX*/
+	/* USART2 RX. */
 	#define USART2_RX_GPIO_Port         GPIOA
 	#define USART2_RX_Pin               LL_GPIO_PIN_3
 	#define USART2_RX_PULL              LL_GPIO_PULL_UP

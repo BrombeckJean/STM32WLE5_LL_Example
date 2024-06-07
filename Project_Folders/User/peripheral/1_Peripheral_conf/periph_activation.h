@@ -12,7 +12,7 @@
 	#define gpio
 	//#define usart1
 	#define usart2
-	#define i2c
+	//#define i2c
 	//#define spi
 
 
@@ -38,7 +38,8 @@
 
 	#ifdef spi
 	#else
-	#warning //don't forget to uncoment the spi define if you want use it.
+    #warning //don't forget to uncoment the spi define if you want use it.
+	#endif
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/
 #endif /* PROJECT_FOLDERS_USER_PERIPHERAL_1_PERIPHERAL_CONF_PERIPH_ACTIVATION_H_ */

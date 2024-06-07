@@ -48,7 +48,7 @@ stm32wlxx_ll_system.h:1582:22:LL_FLASH_SetLatency	1
 stm32wlxx_ll_system.h:1595:26:LL_FLASH_GetLatency	1
 stm32wlxx_ll_cortex.h:247:22:LL_SYSTICK_SetClkSource	2
 stm32wlxx_ll_cortex.h:276:22:LL_SYSTICK_EnableIT	1
-clock_conf.c:10:7:system_clock_config	24
-clock_conf.c:130:7:systick_conf	1
-clock_conf.c:140:11:PLL_GetFreqDomain_SYS	12
-clock_conf.c:184:11:GetSystemClockFreq	12
+clock_conf.c:12:7:System_Clock_Config	24
+clock_conf.c:133:7:Systick_Conf	1
+clock_conf.c:145:11:PLL_Get_Freq_Domain_SYS	12
+clock_conf.c:191:11:Get_System_Clock_Freq	12

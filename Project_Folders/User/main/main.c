@@ -22,7 +22,9 @@
 
 		while (1)
 		{
-
+			GPIO_Toggle(GPIOA,LL_GPIO_PIN_4);
+			//Display_Temperature(30);
+			HAL_Delay(500);
 		}
 	}
 
