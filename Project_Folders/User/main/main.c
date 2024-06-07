@@ -17,14 +17,13 @@
 		System_Clock_Config();
 		Systick_Conf();
 		Init_All_Periph();
+		I2C_STHS34PF80_Disable_Tambient_Tobject();
 
 		NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_4);
 
 		while (1)
 		{
-			GPIO_Toggle(GPIOA,LL_GPIO_PIN_4);
-			//Display_Temperature(30);
-			HAL_Delay(500);
+
 		}
 	}
 

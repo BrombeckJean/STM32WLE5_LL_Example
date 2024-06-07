@@ -11,6 +11,7 @@
 	#include <stdint.h>   /* C99 types	*/
 	#include <stdbool.h>  /* bool type	*/
 	#include <stdio.h>	  /* printf 	*/
+	#include <float.h>
 
 	/* HAL include */
 	#include "stm32wlxx_hal.h"

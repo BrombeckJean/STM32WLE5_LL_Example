@@ -12,7 +12,7 @@
 	#define gpio
 	//#define usart1
 	#define usart2
-	//#define i2c
+	#define i2c
 	//#define spi
 
 

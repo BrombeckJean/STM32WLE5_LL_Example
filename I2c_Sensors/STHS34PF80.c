@@ -8,7 +8,6 @@
 
 //------------------ GLOBAL STATEMENT ----------------------------------------------------------------------- GLOBLAL STATEMENT ----------------------------------------------*/
 STHS34PF80_data_reg data_reg;
-uint16_t double_I2C_data_Rx;
 
 extern uint8_t I2C_data_Rx;
 extern uint8_t I2C_IsActiveFlag_RXNE;
@@ -73,7 +72,7 @@ extern uint8_t I2C_IsActiveFlag_RXNE;
 	 * @retval None. */
 	void I2C_STHS34PF80_Enabled_Tambient_Tobject (void)
 	{
-		SET_BIT(data_reg.CTRL1, 16);
+		SET_BIT(data_reg.CTRL1, 18);
 		while (!LL_I2C_IsActiveFlag_TXE(I2C1));		/* Waiting for release from queue. */
 		I2C_STHS34PF80_Write(STHS34PF80_CTRL1,data_reg.CTRL1);
 	}
@@ -83,7 +82,7 @@ extern uint8_t I2C_IsActiveFlag_RXNE;
 	 * @retval None. */
 	void I2C_STHS34PF80_Disable_Tambient_Tobject (void)
 	{
-		CLEAR_BIT(data_reg.CTRL1, 16);
+		CLEAR_BIT(data_reg.CTRL1, 18);
 		while (!LL_I2C_IsActiveFlag_TXE(I2C1));		/* Waiting for release from queue. */
 		I2C_STHS34PF80_Write(STHS34PF80_CTRL1,data_reg.CTRL1);
 	}
@@ -93,7 +92,7 @@ extern uint8_t I2C_IsActiveFlag_RXNE;
 	 * @retval None. */
 	void I2C_STHS34PF80_Read_Tambient (void)
 	{
-		double_I2C_data_Rx = 0;
+		uint16_t double_I2C_data_Rx = 0;
 
 		/* Check if temperature and motion are activate on the sensor. */
 		if (!I2C_STHS34PF80_Check_Activ_Tambient_Tobject())
@@ -110,9 +109,11 @@ extern uint8_t I2C_IsActiveFlag_RXNE;
 		while (!I2C_IsActiveFlag_RXNE);
 		I2C_IsActiveFlag_RXNE = 0;
 		double_I2C_data_Rx = ((uint16_t)I2C_data_Rx)<<8;
+
+		Display_Temperature(double_I2C_data_Rx);
 	}
 
-//------------------ CHAR INIT ----------------------------------------------------------------------------- USART INIT -----------------------------------------------------*/
+//------------------ DISPLAY TEMPERATURE -------------------------------------------------------------------- DISPLAY TEMPERATURE --------------------------------------------*/
 	/* @brief  Transmits an 8-bits character on the USART.
 	 * @param1 Periphs This parameter can be a combination of the following values:
 	 *         	@arg @ref LPUART1.
@@ -121,11 +122,6 @@ extern uint8_t I2C_IsActiveFlag_RXNE;
 	 * @retval None. */
 	void Display_Temperature (int16_t value)
 	{
-		int16_t  degree = 0;
-		uint16_t degree_hundredth = 0;
-
-		degree = value/100;
-		degree_hundredth = value % 100;
-
-		printf("Temperature = %d,%02d \n\r",degree,degree_hundredth);
+		float temp = (float) value/100;
+		printf("Temperature = %.2f \n\r",temp);
 	}

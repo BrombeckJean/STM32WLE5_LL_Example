@@ -73,7 +73,7 @@ dependents:
 
 # Tool invocations
 STM32WLE5_LL_Exemple.elf STM32WLE5_LL_Exemple.map: $(OBJS) $(USER_OBJS) /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Debug/STM32WLE5_LL_Exemple.elf ../STM32WLE5CCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32WLE5_LL_Exemple.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32WLE5CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32WLE5_LL_Exemple.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "STM32WLE5_LL_Exemple.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32WLE5CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32WLE5_LL_Exemple.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

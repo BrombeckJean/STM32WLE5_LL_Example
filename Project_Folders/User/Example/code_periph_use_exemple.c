@@ -123,12 +123,6 @@
 		 * @retval None. */
 		void Test_I2c (void)
 		{
-#if 0 //don't work
-			//i2c_read(0b10110100,0x0F);
-			i2c_read(0b1011010,0x0F);
-			uint8_t data;
-
-			data = LL_I2C_ReceiveData8(I2C1);
-			printf("data register = %d \n\r",data);
-#endif
+			I2C_STHS34PF80_Read_Tambient();
+			HAL_Delay(5000);
 		}
