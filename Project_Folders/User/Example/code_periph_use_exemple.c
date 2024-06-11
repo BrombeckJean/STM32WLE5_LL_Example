@@ -23,17 +23,17 @@
 	 * @retval None. */
 	void GPIO_Toggle (GPIO_TypeDef * GPIOX, uint32_t pin)
 	{
-		#ifdef gpio
-			/*Initialization*/
-			Gpio_Init(GPIOX, pin, LL_GPIO_MODE_OUTPUT, GPIO_NOPULL, LL_GPIO_SPEED_FREQ_MEDIUM, LL_GPIO_OUTPUT_PUSHPULL, 0);
+	#ifdef gpio
+		/*Initialization*/
+		Gpio_Init(GPIOX, pin, LL_GPIO_MODE_OUTPUT, GPIO_NOPULL, LL_GPIO_SPEED_FREQ_MEDIUM, LL_GPIO_OUTPUT_PUSHPULL, 0);
 
-			/*LOOP*/
-			while (1)
-			{
-				LL_GPIO_TogglePin(GPIOX, pin);
-				HAL_Delay(500);
-			}
-		#endif
+		/*LOOP*/
+		while (1)
+		{
+			LL_GPIO_TogglePin(GPIOX, pin);
+			HAL_Delay(500);
+		}
+	#endif
 	}
 
 
@@ -43,20 +43,20 @@
 	 * @retval None. */
 	void Example_Char_Usart1_Transmit (void)
 	{
-		#ifdef usart1
-			/*Initialization*/
-			Usart1_Init();
+	#ifdef usart1
+		/*Initialization*/
+		Usart1_Init();
 
-			/*LOOP*/
-			while (1)
-			{
-				uint8_t character = 'V';
-				Char8B_Usart_Transmit(USART1, character);
-				character = ' ';
-				Char8B_Usart_Transmit(USART1, character);
-				HAL_Delay(100);
-			}
-		#endif
+		/*LOOP*/
+		while (1)
+		{
+			uint8_t character = 'V';
+			Char8B_Usart_Transmit(USART1, character);
+			character = ' ';
+			Char8B_Usart_Transmit(USART1, character);
+			HAL_Delay(100);
+		}
+	#endif
 	}
 
 //------------------ EXAMPLE PRINTF USART1 TRANSMIT --------------------------------------------------------- EXAMPLE PRINTF USART1 TRANSMIT ---------------------------------*/
@@ -64,17 +64,17 @@
 	 * @retval None. */
 	void Example_Printf_Usart1_Transmit (void)
 	{
-		#ifdef usart1
-			/*Initialization*/
-			Usart1_Init();
+	#ifdef usart1
+		/*Initialization*/
+		Usart1_Init();
 
-			/*LOOP*/
-			while (1)
-			{
-				printf("Hello Word \n\r");
-				HAL_Delay(100);
-			}
-		#endif
+		/*LOOP*/
+		while (1)
+		{
+			printf("Hello Word \n\r");
+			HAL_Delay(100);
+		}
+	#endif
 	}
 
 //------------------ EXEMPLE CHAR USART2 TRANSMIT ----------------------------------------------------------- EXEMPLE CHAR USART2 TRANSMIT -----------------------------------*/
@@ -82,20 +82,20 @@
 	 * @retval None. */
 	void Example_Char_Usart2_Transmit (void)
 	{
-		#ifdef usart2
-			/*Initialization*/
-			Usart2_Init();
+	#ifdef usart2
+		/*Initialization*/
+		Usart2_Init();
 
-			/*LOOP*/
-			while (1)
-			{
-				uint8_t character = 'V';
-				Char8B_Usart_Transmit(USART2, character);
-				character = ' ';
-				Char8B_Usart_Transmit(USART2, character);
-				HAL_Delay(100);
-			}
-		#endif
+		/*LOOP*/
+		while (1)
+		{
+			uint8_t character = 'V';
+			Char8B_Usart_Transmit(USART2, character);
+			character = ' ';
+			Char8B_Usart_Transmit(USART2, character);
+			HAL_Delay(1000);
+		}
+	#endif
 	}
 
 //------------------ EXAMPLE PRINTF USART2 TRANSMIT --------------------------------------------------------- EXAMPLE PRINTF USART2 TRANSMIT ---------------------------------*/
@@ -103,26 +103,42 @@
 	 * @retval None. */
 	void Example_Printf_Usart2_Transmit (void)
 	{
-		#ifdef usart2
-			/*Initialization*/
-			Usart2_Init();
+	#ifdef usart2
+		/*Initialization*/
+		Usart2_Init();
 
-			/*LOOP*/
-			while (1)
-			{
-				printf("Hello Word \n\r");
-				HAL_Delay(100);
-			}
-		#endif
+		/*LOOP*/
+		while (1)
+		{
+			printf("Hello Word \n\r");
+			HAL_Delay(1000);
+		}
+	#endif
 	}
 
-
 //€€€€€€€€€€€€€€€€€€ I2C €€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ I2C €€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€*/
-//------------------ EXAMPLE PRINTF USART2 TRANSMIT --------------------------------------------------------- EXAMPLE PRINTF USART2 TRANSMIT ---------------------------------*/
-		/* @brief  This example show you how to transmit a printf function on the USART2.
-		 * @retval None. */
+//------------------ TEST I2C ------------------------------------------------------------------------------- TEST I2C -------------------------------------------------------*/
+		/* @brief   This example show you how to communicate in i2c.
+		 * @warning For this example you need the usart, for display the temperature.
+		 * @retval  None. */
 		void Test_I2c (void)
 		{
+		#ifdef i2c
 			I2C_STHS34PF80_Read_Tambient();
 			HAL_Delay(5000);
+		#endif
+		}
+
+//€€€€€€€€€€€€€€€€€€ I2C €€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ I2C €€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€*/
+//------------------ TEST RNG ------------------------------------------------------------------------------- TEST RNG -------------------------------------------------------*/
+		/* @brief   This example show you how to use RNG.
+		 * @warning For this example you need the usart, for display the temperature.
+		 * @retval  None. */
+		void Test_RNG (void)
+		{
+		#ifdef rng
+			uint32_t data = Get_RNG_Number();
+			printf("%lu\n\r",data);
+			HAL_Delay(5000);
+		#endif
 		}

@@ -32,6 +32,7 @@ Project_Folders/User/main \
 Project_Folders/User/peripheral/1_Peripheral_conf \
 Project_Folders/User/peripheral/GPIO \
 Project_Folders/User/peripheral/I2C \
+Project_Folders/User/peripheral/RNG \
 Project_Folders/User/peripheral/SPI \
 Project_Folders/User/peripheral/USART \
 

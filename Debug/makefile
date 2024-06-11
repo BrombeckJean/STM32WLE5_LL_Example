@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include Project_Folders/User/peripheral/USART/subdir.mk
 -include Project_Folders/User/peripheral/SPI/subdir.mk
+-include Project_Folders/User/peripheral/RNG/subdir.mk
 -include Project_Folders/User/peripheral/I2C/subdir.mk
 -include Project_Folders/User/peripheral/GPIO/subdir.mk
 -include Project_Folders/User/peripheral/1_Peripheral_conf/subdir.mk

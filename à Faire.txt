@@ -1,6 +1,3 @@
-Créer un système clock conf avec les LL. 					Fait
-Créer un système clock pour tout les clock 				Fait
-Créer un systick_conf										          Fait
-Créer un fichier exemple GPIO LED et SWICH				Fait
-Créer un fichier exemple USART								    Fait
-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
+mettre les clock du systick et du rng à 48 MHz
+créer un test pour le module rng
+modifier le code rng de base.

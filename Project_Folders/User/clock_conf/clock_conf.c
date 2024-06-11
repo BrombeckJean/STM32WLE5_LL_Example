@@ -17,9 +17,9 @@
 		uint8_t LSI = 0;
 		uint8_t HSE = 1;
 		uint8_t LSE = 0;
-		uint8_t PLL = 0;
+		uint8_t PLL = 1;
 
-		const bool useRegulatorVoltage2 = true;
+		const bool useRegulatorVoltage2 = false;
 
 		/* Flash latency configuration. */
 	    LL_FLASH_SetLatency( LL_FLASH_LATENCY_2 );
@@ -41,6 +41,7 @@
 				LL_RCC_HSE_DisableDiv2();
 			}
 			LL_RCC_HSE_EnableTcxo(); /* External Quartz TCXO specificity. */
+
 			LL_RCC_HSE_Enable();
 			while(LL_RCC_HSE_IsReady() == 0);
 		}
@@ -49,6 +50,7 @@
 		if (HSI==1)
 		{
 			LL_RCC_HSI_SetCalibTrimming(64);
+
 			LL_RCC_HSI_Enable();
 			while(LL_RCC_HSI_IsReady() == 0);
 		}
@@ -56,6 +58,10 @@
 		/* MSI clock configuration and starting. */
 		if (MSI==1)
 		{
+			LL_RCC_MSI_EnableRangeSelection();
+			LL_RCC_MSI_SetRange(LL_RCC_MSIRANGE_11);
+			LL_RCC_MSI_SetCalibTrimming(0);
+
 			LL_RCC_MSI_Enable();
 			while(LL_RCC_MSI_IsReady() == 0);
 		}
@@ -70,9 +76,13 @@
 	    /* PLL clock configuration and starting. */
 		if (PLL==1)
 		{
-			LL_RCC_PLL_ConfigDomain_SYS( LL_RCC_PLLSOURCE_HSE, LL_RCC_PLLM_DIV_1, 6, LL_RCC_PLLR_DIV_6);
-			LL_RCC_PLL_Enable( );
+			LL_RCC_PLL_ConfigDomain_SYS( LL_RCC_PLLSOURCE_HSE, LL_RCC_PLLM_DIV_1, 6, LL_RCC_PLLR_DIV_2);
 			LL_RCC_PLL_EnableDomain_SYS();
+
+			LL_RCC_PLL_ConfigDomain_RNG(LL_RCC_PLLSOURCE_HSE, LL_RCC_PLLM_DIV_1, 6, LL_RCC_PLLQ_DIV_2);
+			LL_RCC_PLL_EnableDomain_RNG();
+
+			LL_RCC_PLL_Enable( );
 			while( LL_RCC_PLL_IsReady( ) == 0 );
 		}
 
@@ -85,9 +95,7 @@
 	    /* Set system clock. */
 	    LL_RCC_SetSysClkSource( Clock_Src );
 	    if((LL_RCC_GetSysClkSource() >> RCC_CFGR_SWS_Pos) == LL_RCC_SYS_CLKSOURCE_MSI)
-	    {
-	    	while(1);
-	    }
+	    	{while(1);}
 		while((LL_RCC_GetSysClkSource() >> RCC_CFGR_SWS_Pos) != Clock_Src);
 
 	    /* Set HSI as clock source for wake-up from Stop mode. */

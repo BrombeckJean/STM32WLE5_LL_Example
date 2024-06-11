@@ -16,8 +16,7 @@
 		/*Initialization*/
 		System_Clock_Config();
 		Systick_Conf();
-		Init_All_Periph();
-		I2C_STHS34PF80_Disable_Tambient_Tobject();
+		Init_Periph_Use();
 
 		NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_4);
 

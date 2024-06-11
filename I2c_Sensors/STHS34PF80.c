@@ -114,8 +114,8 @@ extern uint8_t I2C_IsActiveFlag_RXNE;
 	}
 
 //------------------ DISPLAY TEMPERATURE -------------------------------------------------------------------- DISPLAY TEMPERATURE --------------------------------------------*/
-	/* @brief  Transmits an 8-bits character on the USART.
-	 * @param1 Periphs This parameter can be a combination of the following values:
+	/* @brief   Transmits an 8-bits character on the USART.
+	 * @param1  Periphs This parameter can be a combination of the following values:
 	 *         	@arg @ref LPUART1.
 	 *         	@arg @ref USART1.
 	 *         	@arg @ref USART2.

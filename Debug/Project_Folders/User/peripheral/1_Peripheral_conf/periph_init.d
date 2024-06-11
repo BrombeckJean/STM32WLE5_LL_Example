@@ -90,6 +90,7 @@ Project_Folders/User/peripheral/1_Peripheral_conf/periph_init.o: \
  /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/I2C/I2C.h \
  /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/USART/USART.h \
  /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/SPI/SPI.h \
+ /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/RNG/RNG.h \
  /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/I2c_Sensors/STHS34PF80.h
 ../Project_Folders/User/peripheral/1_Peripheral_conf/periph_init.h:
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/GPIO/GPIO.h:
@@ -181,4 +182,5 @@ Project_Folders/User/peripheral/1_Peripheral_conf/periph_init.o: \
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/I2C/I2C.h:
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/USART/USART.h:
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/SPI/SPI.h:
+/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Project_Folders/User/peripheral/RNG/RNG.h:
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/I2c_Sensors/STHS34PF80.h:

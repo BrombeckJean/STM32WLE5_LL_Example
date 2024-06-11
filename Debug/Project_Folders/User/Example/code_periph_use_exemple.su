@@ -5,3 +5,4 @@
 ../Project_Folders/User/Example/code_periph_use_exemple.c:83:7:Example_Char_Usart2_Transmit	16	static
 ../Project_Folders/User/Example/code_periph_use_exemple.c:104:7:Example_Printf_Usart2_Transmit	8	static
 ../Project_Folders/User/Example/code_periph_use_exemple.c:124:8:Test_I2c	4	static
+../Project_Folders/User/Example/code_periph_use_exemple.c:137:8:Test_RNG	16	static

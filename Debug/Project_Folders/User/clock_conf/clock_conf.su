@@ -24,9 +24,12 @@
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1427:22:LL_RCC_MSI_Enable	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1437:22:LL_RCC_MSI_Disable	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1447:26:LL_RCC_MSI_IsReady	4	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1486:22:LL_RCC_MSI_EnableRangeSelection	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1496:26:LL_RCC_MSI_IsEnabledRangeSelect	4	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1519:22:LL_RCC_MSI_SetRange	16	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1541:26:LL_RCC_MSI_GetRange	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1570:26:LL_RCC_MSI_GetRangeAfterStandby	4	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1594:22:LL_RCC_MSI_SetCalibTrimming	16	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1730:22:LL_RCC_SetSysClkSource	16	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1744:26:LL_RCC_GetSysClkSource	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1770:22:LL_RCC_SetAHBPrescaler	16	static
@@ -39,9 +42,11 @@
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2390:22:LL_RCC_PLL_Enable	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2411:26:LL_RCC_PLL_IsReady	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2449:22:LL_RCC_PLL_ConfigDomain_SYS	24	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2551:22:LL_RCC_PLL_ConfigDomain_RNG	24	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2601:26:LL_RCC_PLL_GetN	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2678:26:LL_RCC_PLL_GetR	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2696:26:LL_RCC_PLL_GetDivider	4	static
+/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2738:22:LL_RCC_PLL_EnableDomain_RNG	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2802:22:LL_RCC_PLL_EnableDomain_SYS	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2853:26:LL_RCC_PLL_GetMainSource	4	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_system.h:1582:22:LL_FLASH_SetLatency	16	static
@@ -49,6 +54,6 @@
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_cortex.h:247:22:LL_SYSTICK_SetClkSource	16	static
 /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_cortex.h:276:22:LL_SYSTICK_EnableIT	4	static
 ../Project_Folders/User/clock_conf/clock_conf.c:12:7:System_Clock_Config	16	static
-../Project_Folders/User/clock_conf/clock_conf.c:133:7:Systick_Conf	8	static
-../Project_Folders/User/clock_conf/clock_conf.c:145:11:PLL_Get_Freq_Domain_SYS	24	static
-../Project_Folders/User/clock_conf/clock_conf.c:191:11:Get_System_Clock_Freq	16	static
+../Project_Folders/User/clock_conf/clock_conf.c:141:7:Systick_Conf	8	static
+../Project_Folders/User/clock_conf/clock_conf.c:153:11:PLL_Get_Freq_Domain_SYS	24	static
+../Project_Folders/User/clock_conf/clock_conf.c:199:11:Get_System_Clock_Freq	16	static

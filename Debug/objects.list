@@ -78,5 +78,6 @@
 "./Project_Folders/User/peripheral/1_Peripheral_conf/periph_init.o"
 "./Project_Folders/User/peripheral/GPIO/GPIO.o"
 "./Project_Folders/User/peripheral/I2C/I2C.o"
+"./Project_Folders/User/peripheral/RNG/RNG.o"
 "./Project_Folders/User/peripheral/SPI/SPI.o"
 "./Project_Folders/User/peripheral/USART/USART.o"

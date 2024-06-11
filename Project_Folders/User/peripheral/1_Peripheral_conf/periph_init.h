@@ -12,12 +12,13 @@
 	#include "I2C.h"
 	#include "USART.h"
 	#include "SPI.h"
+	#include "RNG.h"
 
 	/* Sensor I2C */
 	#include "STHS34PF80.h"
 
 //------------------ PROTOTYPE ------------------------------------------------------------------------------ PROTOTYPE --------------------------------------------------------*/
-void Init_All_Periph (void);
+void Init_Periph_Use (void);
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/
 #endif /* PROJECT_FOLDERS_INC_PERIPH_CONF_H_ */

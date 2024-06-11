@@ -12,8 +12,9 @@
 	#define gpio
 	//#define usart1
 	#define usart2
-	#define i2c
+	//#define i2c
 	//#define spi
+	#define rng
 
 
 	#ifdef gpio
@@ -39,6 +40,11 @@
 	#ifdef spi
 	#else
     #warning //don't forget to uncoment the spi define if you want use it.
+	#endif
+
+	#ifdef rng
+	#else
+    #warning //don't forget to uncoment the rng define if you want use it.
 	#endif
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/
