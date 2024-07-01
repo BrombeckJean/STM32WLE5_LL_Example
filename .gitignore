@@ -1,0 +1,4 @@
+*.su
+*.o
+*.cyclo
+Debug/
