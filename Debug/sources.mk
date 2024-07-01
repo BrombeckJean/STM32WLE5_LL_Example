@@ -23,16 +23,17 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Driver/STM32WLxx_HAL_Driver/Src \
-I2c_Sensors \
 Project_Folders/ST/ST.c \
 Project_Folders/Startup \
+Project_Folders/User/Clock_Conf \
 Project_Folders/User/Example \
-Project_Folders/User/clock_conf \
-Project_Folders/User/main \
-Project_Folders/User/peripheral/1_Peripheral_conf \
-Project_Folders/User/peripheral/GPIO \
-Project_Folders/User/peripheral/I2C \
-Project_Folders/User/peripheral/RNG \
-Project_Folders/User/peripheral/SPI \
-Project_Folders/User/peripheral/USART \
+Project_Folders/User/Main \
+Project_Folders/User/Option \
+Project_Folders/User/Peripheral/GPIO \
+Project_Folders/User/Peripheral/I2C \
+Project_Folders/User/Peripheral/I2C/I2c_Sensors \
+Project_Folders/User/Peripheral/Peripheral_Init \
+Project_Folders/User/Peripheral/RNG \
+Project_Folders/User/Peripheral/SPI \
+Project_Folders/User/Peripheral/USART \
 

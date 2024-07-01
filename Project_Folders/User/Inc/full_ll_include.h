@@ -3,8 +3,8 @@
   *******************************************************************************/
 
 //------------------ SPECIAL DEFINE ------------------------------------------------------------------------- SPECIAL DEFINE ---------------------------------------------------*/
-#ifndef PROJECT_FOLDERS_INC_FULL_LL_INCLUDE_H_
-#define PROJECT_FOLDERS_INC_FULL_LL_INCLUDE_H_
+#ifndef PROJECT_FOLDERS_USER_INC_FULL_LL_INCLUDE_H_
+#define PROJECT_FOLDERS_USER_INC_FULL_LL_INCLUDE_H_
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE ----------------------------------------------------------*/
 	/* outside include project. */
@@ -50,4 +50,4 @@
 	#include "core_cm4.h"
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/
-#endif /* PROJECT_FOLDERS_INC_FULL_LL_INCLUDE_H_ */
+#endif /* PROJECT_FOLDERS_USER_INC_FULL_LL_INCLUDE_H_ */

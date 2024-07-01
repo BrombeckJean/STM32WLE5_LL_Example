@@ -9,18 +9,19 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Project_Folders/User/peripheral/USART/subdir.mk
--include Project_Folders/User/peripheral/SPI/subdir.mk
--include Project_Folders/User/peripheral/RNG/subdir.mk
--include Project_Folders/User/peripheral/I2C/subdir.mk
--include Project_Folders/User/peripheral/GPIO/subdir.mk
--include Project_Folders/User/peripheral/1_Peripheral_conf/subdir.mk
--include Project_Folders/User/main/subdir.mk
--include Project_Folders/User/clock_conf/subdir.mk
+-include Project_Folders/User/Peripheral/USART/subdir.mk
+-include Project_Folders/User/Peripheral/SPI/subdir.mk
+-include Project_Folders/User/Peripheral/RNG/subdir.mk
+-include Project_Folders/User/Peripheral/Peripheral_Init/subdir.mk
+-include Project_Folders/User/Peripheral/I2C/I2c_Sensors/subdir.mk
+-include Project_Folders/User/Peripheral/I2C/subdir.mk
+-include Project_Folders/User/Peripheral/GPIO/subdir.mk
+-include Project_Folders/User/Option/subdir.mk
+-include Project_Folders/User/Main/subdir.mk
 -include Project_Folders/User/Example/subdir.mk
+-include Project_Folders/User/Clock_Conf/subdir.mk
 -include Project_Folders/Startup/subdir.mk
 -include Project_Folders/ST/ST.c/subdir.mk
--include I2c_Sensors/subdir.mk
 -include Driver/STM32WLxx_HAL_Driver/Src/subdir.mk
 -include objects.mk
 
@@ -70,7 +71,7 @@ all: main-build
 main-build: STM32WLE5_LL_Exemple.elf secondary-outputs
 
 dependents:
-	-cd /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Debug && $(MAKE) all
+	-cd /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Debug && $(MAKE) clean all
 
 # Tool invocations
 STM32WLE5_LL_Exemple.elf STM32WLE5_LL_Exemple.map: $(OBJS) $(USER_OBJS) /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Debug/STM32WLE5_LL_Exemple.elf ../STM32WLE5CCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)

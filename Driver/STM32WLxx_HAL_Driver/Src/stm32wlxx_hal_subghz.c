@@ -130,7 +130,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32wlxx_hal.h"
-
 /** @addtogroup STM32WLxx_HAL_Driver
   * @{
   */
@@ -165,12 +164,7 @@
 /** @defgroup SUBGHZ_Private_Functions SUBGHZ Private Functions
   * @{
   */
-void              SUBGHZSPI_Init(uint32_t BaudratePrescaler);
-void              SUBGHZSPI_DeInit(void);
-HAL_StatusTypeDef SUBGHZSPI_Transmit(SUBGHZ_HandleTypeDef *hsubghz, uint8_t Data);
-HAL_StatusTypeDef SUBGHZSPI_Receive(SUBGHZ_HandleTypeDef *hsubghz, uint8_t *pData);
-HAL_StatusTypeDef SUBGHZ_WaitOnBusy(SUBGHZ_HandleTypeDef *hsubghz);
-HAL_StatusTypeDef SUBGHZ_CheckDeviceReady(SUBGHZ_HandleTypeDef *hsubghz);
+
 /**
   * @}
   */
@@ -1538,7 +1532,7 @@ void SUBGHZSPI_Init(uint32_t BaudratePrescaler)
    *       Clock polarity: Low                                                *
    *                phase: 1st Edge                                           *
    *       NSS management: Internal (Done with External bit inside PWR        *
-   *  Communication speed: BaudratePrescaler                             *
+   *  Communication speed: BaudratePrescaler                                  *
    *            First bit: MSB                                                *
    *      CRC calculation: Disable                                            *
    *--------------------------------------------------------------------------*/

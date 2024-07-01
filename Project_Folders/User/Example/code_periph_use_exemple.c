@@ -139,6 +139,6 @@
 		#ifdef rng
 			uint32_t data = Get_RNG_Number();
 			printf("%lu\n\r",data);
-			HAL_Delay(5000);
+			HAL_Delay(2000);
 		#endif
 		}

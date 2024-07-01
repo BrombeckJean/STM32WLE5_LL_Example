@@ -105,6 +105,8 @@ typedef struct
                                         to protect. Make sure this parameter is multiple of PCROP granularity */
   uint32_t PCROP1BEndAddr;         /*!< PCROP Zone B End address (used for OPTIONBYTE_PCROP). It represents first address of end block
                                         to protect. Make sure this parameter is multiple of PCROP granularity */
+  uint32_t SUBGHZSPISecureAccess;  /*!< Sub-GHz radio SPI security access enabled or disabled (used for OPTIONBYTE_SUBGHZSPI_SECURE_ACCESS).
+                                           This parameter can be a value of @ref FLASH_OB_SUBGHZSPI_SECURE_ACCESS */
 #if defined(DUAL_CORE)
   uint32_t SecureFlashStartAddr;   /*!< Secure Flash start address (used for OPTIONBYTE_SECURE_MODE).
                                         This parameter must be a value between begin and end of Flash bank
@@ -118,7 +120,7 @@ typedef struct
   uint32_t SecureMode;             /*!< Secure mode activated or deactivated.
                                         This parameter can be a value of @ref FLASH_OB_SECURITY_MODE */
   uint32_t SUBGHZSPISecureAccess;  /*!< Sub-GHz radio SPI security access enabled or disabled (used for OPTIONBYTE_SUBGHZSPI_SECURE_ACCESS).
-                                        This parameter can be a value of @ref FLASH_OB_SUBGHZSPI_SECURE_ACCESS */
+                                         This parameter can be a value of @ref FLASH_OB_SUBGHZSPI_SECURE_ACCESS */
   uint32_t C2DebugAccessMode;      /*!< CPU2 debug access enabled or disabled (used for OPTIONBYTE_C2_DEBUG_ACCESS).
                                         This parameter can be a value of @ref FLASH_OB_C2_DEBUG_ACCESS */
   uint32_t C2BootRegion;           /*!< CPU2 Secure Boot memory region(used for OPTIONBYTE_C2_BOOT_VECT).

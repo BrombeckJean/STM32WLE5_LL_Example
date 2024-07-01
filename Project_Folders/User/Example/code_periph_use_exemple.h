@@ -4,11 +4,11 @@
   *******************************************************************************/
 
 //------------------ SPECIAL DEFINE ------------------------------------------------------------------------- SPECIAL DEFINE ---------------------------------------------------*/
-#ifndef PROJECT_FOLDERS_INC_CODE_PERIPH_USE_EXEMPLE_H_
-#define PROJECT_FOLDERS_INC_CODE_PERIPH_USE_EXEMPLE_H_
+#ifndef PROJECT_FOLDERS_USER_CODE_PERIPH_USE_EXEMPLE_H_
+#define PROJECT_FOLDERS_USER_CODE_PERIPH_USE_EXEMPLE_H_
 
 //------------------ INCLUDE -------------------------------------------------------------------------------- INCLUDE ----------------------------------------------------------*/
-	#include <periph_init.h>
+	#include "periph_init.h"
 
 //------------------ PROTOTYPE ------------------------------------------------------------------------------ PROTOTYPE --------------------------------------------------------*/
 	/*GPIO function*/
@@ -20,6 +20,7 @@
 	void Example_Char_Usart2_Transmit (void);
 	void Example_Printf_Usart2_Transmit (void);
 	void Test_I2c (void);
+	void Test_RNG (void);
 
 //------------------ END SPECIAL DEFINE --------------------------------------------------------------------- END SPECIAL DEFINE -----------------------------------------------*/
-#endif /* PROJECT_FOLDERS_INC_CODE_PERIPH_USE_EXEMPLE_H_ */
+#endif /* PROJECT_FOLDERS_USER_CODE_PERIPH_USE_EXEMPLE_H_ */

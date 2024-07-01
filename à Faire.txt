@@ -1,3 +1,1 @@
-mettre les clock du systick et du rng à 48 MHz
-créer un test pour le module rng
-modifier le code rng de base.
+créer un trace configuration
