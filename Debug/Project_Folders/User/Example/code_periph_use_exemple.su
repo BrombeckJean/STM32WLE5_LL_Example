@@ -1,8 +1,0 @@
-/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_gpio.h:994:22:LL_GPIO_TogglePin	24	static
-../Project_Folders/User/Example/code_periph_use_exemple.c:24:7:GPIO_Toggle	32	static
-../Project_Folders/User/Example/code_periph_use_exemple.c:44:7:Example_Char_Usart1_Transmit	4	static
-../Project_Folders/User/Example/code_periph_use_exemple.c:65:7:Example_Printf_Usart1_Transmit	4	static
-../Project_Folders/User/Example/code_periph_use_exemple.c:83:7:Example_Char_Usart2_Transmit	4	static
-../Project_Folders/User/Example/code_periph_use_exemple.c:104:7:Example_Printf_Usart2_Transmit	4	static
-../Project_Folders/User/Example/code_periph_use_exemple.c:124:8:Test_I2c	4	static
-../Project_Folders/User/Example/code_periph_use_exemple.c:137:8:Test_RNG	4	static

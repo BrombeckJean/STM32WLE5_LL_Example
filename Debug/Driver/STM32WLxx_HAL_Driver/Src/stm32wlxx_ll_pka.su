@@ -1,6 +1,0 @@
-/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:763:22:LL_AHB3_GRP1_ForceReset	16	static
-/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:806:22:LL_AHB3_GRP1_ReleaseReset	16	static
-/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_pka.h:193:22:LL_PKA_Config	16	static
-../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_pka.c:87:13:LL_PKA_DeInit	24	static
-../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_pka.c:119:13:LL_PKA_Init	16	static
-../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_pka.c:136:6:LL_PKA_StructInit	16	static

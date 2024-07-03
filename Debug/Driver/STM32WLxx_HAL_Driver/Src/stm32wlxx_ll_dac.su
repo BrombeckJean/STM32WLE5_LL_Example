@@ -1,6 +1,0 @@
-/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:1062:22:LL_APB1_GRP1_ForceReset	16	static
-/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:1107:22:LL_APB1_GRP1_ReleaseReset	16	static
-/home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Driver/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_dac.h:1210:26:LL_DAC_IsEnabled	16	static
-../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_dac.c:138:13:LL_DAC_DeInit	16	static
-../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_dac.c:176:13:LL_DAC_Init	32	static
-../Driver/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_dac.c:256:6:LL_DAC_StructInit	16	static
