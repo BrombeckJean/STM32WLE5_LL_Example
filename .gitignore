@@ -1,4 +1,6 @@
 *.su
 *.o
 *.cyclo
+*.mk
+*.txt
 Debug/
