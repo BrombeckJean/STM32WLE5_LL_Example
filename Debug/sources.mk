@@ -36,4 +36,5 @@ Project_Folders/User/Peripheral/Peripheral_Init \
 Project_Folders/User/Peripheral/RNG \
 Project_Folders/User/Peripheral/SPI \
 Project_Folders/User/Peripheral/USART \
+Project_Folders/User/TEST \
 

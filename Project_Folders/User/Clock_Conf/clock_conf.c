@@ -29,6 +29,7 @@
 	 * uint32_t HCLK3_Freq			*/
 	uint32_t Periph_Clock_Freq[4] = {0};
 #endif
+
 //------------------ SYSTEM CLOCK CONFIG -------------------------------------------------------------------- SYSTEM CLOCK CONFIG --------------------------------------------*/
 	/* @brief  Configure all the clock you want use.
 	 * @retval None. */
@@ -39,7 +40,7 @@
 		uint8_t HSI = 0;
 		uint8_t LSI = 0; uint8_t prediv_LSI = 0; // if set at 1 divide by 128.
 		uint8_t HSE = 1; uint8_t useRegulatorVoltage2 = 1;
-		uint8_t LSE = 0;
+		uint8_t LSE = 1;
 		uint8_t PLL = 1;
 
 		/* Flash latency configuration. */
@@ -127,20 +128,6 @@
 			while(LL_RCC_HSE_IsReady() == 0);
 		}
 
-	    // LSE clock configuration and starting. ----------------*/
-		if (LSE==1)
-		{
-			LL_RCC_LSE_SetDriveCapability(LL_RCC_LSEDRIVE_LOW);
-			LL_RCC_LSE_EnablePropagation();
-			LL_RCC_LSE_Enable();
-			while(LL_RCC_LSE_IsReady() == 0){};
-
-			/* Frequency output of the LSE */
-			#ifdef clock_freq_know
-				Clock_Freq[4] = LSE_VALUE;
-			#endif
-		}
-
 	    // PLL clock configuration and starting. ----------------*/
 		if (PLL==1)
 		{
@@ -196,6 +183,20 @@
 			Periph_Clock_Freq[0] = __LL_RCC_CALC_PCLK1_FREQ (HCLK3_freq, LL_RCC_GetAHB3Prescaler());
 			Periph_Clock_Freq[1] = __LL_RCC_CALC_PCLK2_FREQ (HCLK3_freq, LL_RCC_GetAHB3Prescaler());
 		#endif
+
+		// LSE clock configuration and starting. ----------------*/
+		if (LSE==1)
+		{
+			LL_RCC_LSE_SetDriveCapability(LL_RCC_LSEDRIVE_LOW);
+			LL_RCC_LSE_EnablePropagation();
+			LL_RCC_LSE_Enable();
+			while(LL_RCC_LSE_IsReady() == 0){};
+
+			/* Frequency output of the LSE */
+			#ifdef clock_freq_know
+				Clock_Freq[4] = LSE_VALUE;
+			#endif
+		}
 
 	    //LL_RCC_SetRTCClockSource( LL_RCC_RTC_CLKSOURCE_LSE );
 	    //LL_RCC_EnableRTC( );

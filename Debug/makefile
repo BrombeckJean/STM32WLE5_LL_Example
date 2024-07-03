@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Project_Folders/User/TEST/subdir.mk
 -include Project_Folders/User/Peripheral/USART/subdir.mk
 -include Project_Folders/User/Peripheral/SPI/subdir.mk
 -include Project_Folders/User/Peripheral/RNG/subdir.mk
@@ -71,7 +72,7 @@ all: main-build
 main-build: STM32WLE5_LL_Exemple.elf secondary-outputs
 
 dependents:
-	-cd /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Debug && $(MAKE) clean all
+	-cd /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Debug && $(MAKE) all
 
 # Tool invocations
 STM32WLE5_LL_Exemple.elf STM32WLE5_LL_Exemple.map: $(OBJS) $(USER_OBJS) /home/jean/STM32CubeIDE/workspace_1.12.1/STM32WLE5_LL_Exemple/Debug/STM32WLE5_LL_Exemple.elf ../STM32WLE5CCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)

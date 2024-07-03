@@ -83,3 +83,4 @@
 "./Project_Folders/User/Peripheral/RNG/RNG.o"
 "./Project_Folders/User/Peripheral/SPI/SPI.o"
 "./Project_Folders/User/Peripheral/USART/USART.o"
+"./Project_Folders/User/TEST/smtc_hal_rtc.o"
