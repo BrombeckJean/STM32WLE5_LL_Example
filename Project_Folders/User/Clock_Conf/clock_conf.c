@@ -202,18 +202,21 @@
 	    //LL_RCC_EnableRTC( );
 
 	    /* Disable unused clocks. */
-	    if (MSI==1)
+	    if (MSI==0)
 	    	LL_RCC_MSI_Disable();
-	    if (HSI==1)
+	    if (HSI==0)
 	    	LL_RCC_HSI_Disable();
-	    if (LSI==1)
+	    if (LSI==0)
 			LL_RCC_LSI_Disable();
-	    if (HSE==1)
+	    if (HSE==0)
 	    	LL_RCC_HSE_Disable();
-	    if (LSE==1)
+	    if (LSE==0)
 	    	LL_RCC_LSE_Disable();
 	    if (MSI + HSI + LSI + HSE + LSE == 0)
 	    	{Activation_Error();}
+
+	    /*Peripheral clock source*/
+
 	}
 
 //------------------ SYSTICK CONF ---------------------------------------------------------------------------- SYSTICK CONF --------------------------------------------------*/
@@ -226,6 +229,7 @@
 		LL_SYSTICK_SetClkSource(LL_SYSTICK_CLKSOURCE_HCLK);
 		NVIC_SetPriority(SysTick_IRQn, TICK_INT_PRIORITY);
 		LL_SYSTICK_EnableIT();
+		__enable_irq();
 	}
 
 //------------------ GET SYSTEM CLOCK FREQ ------------------------------------------------------------------- GET SYSTEM CLOCK FREQ -----------------------------------------*/
@@ -293,14 +297,9 @@
 	uint32_t Get_Freq_PLL_Q_CLK(void)
 	{
 		uint32_t pllinputfreq = PLL_clock_source();
-		uint32_t PLL_M = LL_RCC_PLL_GetDivider();
-		uint32_t PLL_N = LL_RCC_PLL_GetN();
-		uint32_t PLL_Q = LL_RCC_PLL_GetQ();
-		uint32_t plloutputfreq;
 
-		plloutputfreq = ((pllinputfreq / PLL_M) * PLL_N) / PLL_Q;
+		return __LL_RCC_CALC_PLLCLK_RNG_FREQ (pllinputfreq, LL_RCC_PLL_GetDivider(), LL_RCC_PLL_GetN(), LL_RCC_PLL_GetQ());
 
-		return plloutputfreq;
 	}
 
 //------------------ PLL GET FREQ DOMAIM SYS ----------------------------------------------------------------- PLL GET FREQ DOMAIM SYS ---------------------------------------*/
@@ -309,14 +308,8 @@
 	uint32_t Get_Freq_PLL_P_CLK(void)
 	{
 		uint32_t pllinputfreq = PLL_clock_source();
-		uint32_t PLL_M = LL_RCC_PLL_GetDivider();
-		uint32_t PLL_N = LL_RCC_PLL_GetN();
-		uint32_t PLL_P = LL_RCC_PLL_GetP();
-		uint32_t plloutputfreq;
 
-		plloutputfreq = ((pllinputfreq / PLL_M) * PLL_N) / PLL_P;
-
-		return plloutputfreq;
+		return __LL_RCC_CALC_PLLCLK_ADC_FREQ (pllinputfreq, LL_RCC_PLL_GetDivider(), LL_RCC_PLL_GetN(), LL_RCC_PLL_GetP());
 	}
 
 //------------------ PLL GET FREQ DOMAIM SYS ----------------------------------------------------------------- PLL GET FREQ DOMAIM SYS ---------------------------------------*/
